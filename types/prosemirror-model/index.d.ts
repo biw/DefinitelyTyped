@@ -5,6 +5,7 @@
 //                 Tim Baumann <https://github.com/timjb>
 //                 Malte Blanken <https://github.com/neknalb>
 //                 Patrick Simmelbauer <https://github.com/patsimm>
+//                 Ben Williams <https://github.com/biw>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
@@ -1031,6 +1032,10 @@ export class NodeType<S extends Schema = any> {
    * directly editable content.
    */
   isAtom: boolean;
+  /**
+   * Tells you whether this node type has any required attributes.
+   */
+  hasRequiredAttrs: (): boolean
   /**
    * Create a `Node` of this type. The given attributes are
    * checked and defaulted (you can pass `null` to use the type's
